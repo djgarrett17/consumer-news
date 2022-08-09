@@ -1,13 +1,13 @@
 // server/index.js
 const express = require("express");
 const PORT = process.env.PORT || 3001;
-const MY_KEY = process.env.REACT_APP_API_KEY;
 const app = express();
 const mailchimp = require("@mailchimp/mailchimp_marketing");
 const client = require("mailchimp-marketing");
 var stringify = require('stringify');
 const shell = require('shelljs');
 const write = require('write');
+require('dotenv').config();
 
 var bodyParser=require("body-parser");
 
@@ -39,12 +39,12 @@ stringify.registerWithRequire({
 // console.log(myTextFile);
 
 mailchimp.setConfig({
-  apiKey: MY_KEY,
+  apiKey: process.env.REACT_APP_API_KEY,
   server: "us5",
 });
 
 client.setConfig({
-  apiKey: MY_KEY,
+  apiKey: process.env.REACT_APP_API_KEY,
   server: "us5",
 });
 
