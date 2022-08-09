@@ -1,6 +1,7 @@
 // server/index.js
 const express = require("express");
 const PORT = process.env.PORT || 3001;
+const MY_KEY = process.env.REACT_APP_API_KEY;
 const app = express();
 const mailchimp = require("@mailchimp/mailchimp_marketing");
 const client = require("mailchimp-marketing");
@@ -23,36 +24,6 @@ app.get('/', function(req, res) {
 
 
 
-
-
-
-
-
-app.post('/', (req, res) =>{
-  console.log(req.body.fname);
-  // alert(req.body.fname);
-  write(__dirname + '/test.txt', 'test=' + req.body.fname, err => {
-    console.log(err)
-  });
-
-
-  mailchimp.setConfig({
-    apiKey: "fe0bbe25ff34e6d9e6e6ed88fbe0eb16-us5",
-    server: "us5",
-  });
-
-  client.setConfig({
-    apiKey: "fe0bbe25ff34e6d9e6e6ed88fbe0eb16-us5",
-    server: "us5",
-  });
-
-  function cmd() {
-    shell.exec(__dirname + '/script.sh')
-    console.log("chimpy")
-   }
-
-
-
 // Setup to update html
 stringify.registerWithRequire({
   appliesTo: { includeExtensions: ['.txt', '.html'] },
@@ -65,8 +36,33 @@ stringify.registerWithRequire({
   }
 });
 
-
 // console.log(myTextFile);
+
+mailchimp.setConfig({
+  apiKey: MY_KEY,
+  server: "us5",
+});
+
+client.setConfig({
+  apiKey: MY_KEY,
+  server: "us5",
+});
+
+
+
+
+app.post('/', (req, res) =>{
+  console.log(req.body.fname);
+  // alert(req.body.fname);
+  write(__dirname + '/test.txt', 'test=' + req.body.fname, err => {
+    console.log(err)
+  });
+
+
+  function cmd() {
+    shell.exec(__dirname + '/script.sh')
+    console.log("chimpy")
+   }
 
 
   async function run() {
