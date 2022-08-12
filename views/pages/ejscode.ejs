@@ -9,19 +9,13 @@
            <div className="badgeEdge"></div>
 
             <div>
-                   <form action="/" method="post"> 
+                   <form action="/" method="post">
                         <div>
-                            <input type="text" id="txtName" name="fname" placeholder="Enter your name" />
-                        </div>
-                        <div>
-                            <input type="file" id="myFile" name="filename">
-                        </div>
-                        <div>
-                            <select id="selCountry">
-                                <option value="">-- Choose the country --</option>
-                                <option value="India">India</option>
-                                <option value="Japan">Japan</option>
-                                <option value="USA">USA</option>
+                            <select id="selAgency" name="agency">
+                                <option value="">-- Choose your agency --</option>
+                                <option value="India">Guru Travel</option>
+                                <option value="Japan">Starship Travel</option>
+                                <option value="USA">Extreme Destinations Travel</option>
                             </select>
                         </div>
                         <div>
@@ -30,7 +24,12 @@
                         <div>
                             <textarea id="msg" name="msg" placeholder="Intro Copy"></textarea>
                         </div>
-
+                        <div>
+                            <input type="text" id="copyTitle" name="landinglink" placeholder="Link to Landing Page" />
+                        </div>
+                        <div>
+                            <input type="file" id="myFile" name="filename">
+                        </div>
                         <div>
                             <input type="submit" id="bt" value="Save data to file" />
                         </div>

@@ -1,3 +1,5 @@
-singlestring="\'" 
- contentTitle='All Day Long Coden"s, ${single}YES${single} co' 
- content='All Day Long Coden"s, ${single}YES${single} copy'
+forwardSlash="/" 
+ singlestring="\'" 
+ contentTitle='All Day Long Coden${single}s, "YES"' 
+ content='https:${forwardSlash}${forwardSlash}us5.admin.mailchimp.com${forwardSlash}campaigns${forwardSlash}#f_list:63105;f_assigned:unassigned;f_search:web%20marketing;t:campaigns-list!!@#$%^&*()_+{}|:"<>?~`\][;.${single}${forwardSlash}-=™℠®©' 
+ landingLink='https:${forwardSlash}${forwardSlash}us5.admin.mailchimp.com${forwardSlash}campaigns${forwardSlash}#f_list:63105;f_assigned:unassigned;f_search:web%20marketing;t:campaigns-list'

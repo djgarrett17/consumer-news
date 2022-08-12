@@ -56,24 +56,21 @@ app.post('/', (req, res) =>{
 
   console.log(req.body.msg);
   console.log(req.body.contentTitle);
+  console.log(req.body.landinglink);
 
-  // var content = req.body.msg.replace(/["]/g, x)
-  // content = content.replace(/[']/g, z)
-
-  // console.log(content);
-  // var contentTitle = req.body.contentTitle.replace(/[']/g, z)
-  // contentTitle = contentTitle.replace(/["]/g, x)
 
   // console.log(contentTitle);
   // write(__dirname + '/test.txt', 'content=' + '"' + req.body.msg + '"'  + " \n " + 'contentTitle=' + '"cat << BLOCK3 ' + req.body.contentTitle + ' BLOCK3"', err => {
   //   console.log(err)
   // });
 
-  var outputstr1= req.body.msg.replace(/'/g,'${single}');
-  var outputstr2= req.body.contentTitle.replace(/'/g,'${single}');
-  var singlequote="\\'"
+  var outputstr1= req.body.msg.replace(/'/g,'${single}').replaceAll('/','${forwardSlash}');
+  var outputstr2= req.body.contentTitle.replace(/'/g,'${single}').replaceAll('/','${forwardSlash}');
+  var singlequote="\\'";
+  var forwardslash="/";
+  var landingLink= req.body.landinglink.replace(/'/g,'${single}').replaceAll('/','${forwardSlash}');
 
-  write(__dirname + '/test.txt', `singlestring="${singlequote}" \n contentTitle='${outputstr2}' \n content='${outputstr1}'`, err => {
+  write(__dirname + '/test.txt', `forwardSlash="${forwardslash}" \n singlestring="${singlequote}" \n contentTitle='${outputstr2}' \n content='${outputstr1}' \n landingLink='${landingLink}'`, err => {
     console.log(err)
   });
 
