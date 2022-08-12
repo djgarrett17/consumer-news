@@ -1,1 +1,3 @@
-test=johnson
+singlestring="\'" 
+ contentTitle='All Day Long Coden"s, ${single}YES${single} co' 
+ content='All Day Long Coden"s, ${single}YES${single} copy'

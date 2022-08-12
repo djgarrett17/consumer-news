@@ -8,9 +8,7 @@ var stringify = require('stringify');
 const shell = require('shelljs');
 const write = require('write');
 require('dotenv').config();
-
 var bodyParser=require("body-parser");
-
 
 
 
@@ -53,10 +51,32 @@ client.setConfig({
 
 app.post('/', (req, res) =>{
   console.log(req.body.fname);
-  // alert(req.body.fname);
-  write(__dirname + '/test.txt', 'test=' + req.body.fname, err => {
+  // const x = "&ldquo;"
+  // const z = "&lsquo;"
+
+  console.log(req.body.msg);
+  console.log(req.body.contentTitle);
+
+  // var content = req.body.msg.replace(/["]/g, x)
+  // content = content.replace(/[']/g, z)
+
+  // console.log(content);
+  // var contentTitle = req.body.contentTitle.replace(/[']/g, z)
+  // contentTitle = contentTitle.replace(/["]/g, x)
+
+  // console.log(contentTitle);
+  // write(__dirname + '/test.txt', 'content=' + '"' + req.body.msg + '"'  + " \n " + 'contentTitle=' + '"cat << BLOCK3 ' + req.body.contentTitle + ' BLOCK3"', err => {
+  //   console.log(err)
+  // });
+
+  var outputstr1= req.body.msg.replace(/'/g,'${single}');
+  var outputstr2= req.body.contentTitle.replace(/'/g,'${single}');
+  var singlequote="\\'"
+
+  write(__dirname + '/test.txt', `singlestring="${singlequote}" \n contentTitle='${outputstr2}' \n content='${outputstr1}'`, err => {
     console.log(err)
   });
+
 
 
   function cmd() {
