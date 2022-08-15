@@ -9,7 +9,7 @@
            <div className="badgeEdge"></div>
 
             <div>
-                   <form action="/" method="post">
+                   <form action="/" method="post" enctype='multipart/form-data'>
                         <div>
                             <select id="selAgency" name="agency">
                                 <option value="">-- Choose your agency --</option>
@@ -28,7 +28,10 @@
                             <input type="text" id="copyTitle" name="landinglink" placeholder="Link to Landing Page" />
                         </div>
                         <div>
-                            <input type="file" id="myFile" name="filename">
+                            <input type="file" id="myFile" name="thefilename">
+                        </div>
+                        <div>
+                            <img id="output" width="200" />
                         </div>
                         <div>
                             <input type="submit" id="bt" value="Save data to file" />
