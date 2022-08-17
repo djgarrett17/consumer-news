@@ -12,12 +12,35 @@ var bodyParser=require("body-parser");
 const multer = require('multer');
 const morgan = require("morgan");
 const path = require('path');
-
-const upload = multer({dest: 'uploads/'});
+const fs = require('fs');
+// const upload = multer({dest: 'uploads/'});
 
 
 // app.use(express.static(__dirname, 'server'));
 app.set('view engine', 'ejs');
+
+
+var storage = multer.diskStorage({
+  destination: function(req, file, callback) {
+    callback(null, './uploads');
+  },
+  
+  // By default, multer removes file extensions so let's add them back
+  filename: function(req, file, callback) {
+   
+    // const ogname = req.file.originalname;
+    // cb(null, req.file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+    // cb(null, file.originalname);
+    
+    var uploadFileName = "x.jpg";
+    callback(null, file.originalname);
+  }
+  });
+
+  var upload = multer({ storage: storage });
+
+
+
 
 
 app.use(express.json());
@@ -80,11 +103,14 @@ client.setConfig({
 
 
 // console.log(ogname);
+// var ogname = req.file.originalname;
+// console.log(ogname);
 
 
 
 
-app.post('/', upload.single('thefilename'), (req, res) =>{
+
+app.post('/', upload.single('thefilename'), (req, res) => {
   console.log(req.body.fname);
   // const x = "&ldquo;"
   // const z = "&lsquo;"
@@ -92,11 +118,13 @@ app.post('/', upload.single('thefilename'), (req, res) =>{
   console.log(req.body.msg);
   console.log(req.body.contentTitle);
   console.log(req.body.landinglink);
-  console.log(req.body.thefilename);
+  console.log(req.file.filename);
   // console.log(file.req.body.thefilename);
   console.log(req.file);
+  console.log(req.file.fieldname);
   console.log(req.file.originalname);
-  
+  console.log(__dirname);
+  console.log(process.cwd() + "/" + req.file.path);
 
   
 
@@ -126,51 +154,23 @@ app.post('/', upload.single('thefilename'), (req, res) =>{
 
   
 
-   function fun() {
-
-var ogname = req.file.originalname;
-console.log(ogname);
-
-var storage = multer.diskStorage({
-  destination: function(req, file, cb) {
-    cb(null, 'uploads/');
-  },
+  const fun = async () => {
+    const contents = fs.readFileSync(`./uploads/${req.file.originalname}`, {encoding: 'base64'});
   
-  // By default, multer removes file extensions so let's add them back
-  filename: function(req, file, cb) {
+// let menny3 = btoa(process.cwd() + "/" + req.file.path);
+// file_data: process.cwd() + "/" + req.file.path,
+
+      const response3 = await client.fileManager.upload({
+        name: req.file.originalname,
+        file_data: contents,
+        
+      });
+      console.log(response3);
+      console.log(contents);
+   console.log(req.file);
+
    
-    const ogname = req.file.originalname;
-    // cb(null, req.file.fieldname + '-' + Date.now() + path.extname(file.originalname));
-    // cb(null, file.originalname);
-    var uploadFileName = "x.jpg";
-    cb(null, uploadFileName);
-  }
-  });
 
-
-    var upload = multer({ storage: storage}).single('thefilename');
-
-    upload(req, res, function(err) {
-      // req.file contains information of uploaded file
-      // req.body contains information of text fields, if there were any
-  
-      // if (req.fileValidationError) {
-      //     return res.send(req.fileValidationError);
-      // }
-      // else if (!req.file) {
-      //     return res.send('Please select an image to upload');
-      // }
-      // else if (err instanceof multer.MulterError) {
-      //     return res.send(err);
-      // }
-      // else if (err) {
-      //     return res.send(err);
-      // }
-  
-      // Display uploaded image for user validation
-      // res.send(`You have uploaded this image: <hr/><img src="${req.file.path}" width="500"><hr /><a href="./">Upload another image</a>`);
-  });
-   
    }
 
 
