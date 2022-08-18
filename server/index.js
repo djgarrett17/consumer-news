@@ -146,13 +146,6 @@ app.post('/', upload.single('thefilename'), (req, res) => {
 
 
 
-  write(__dirname + '/test.txt', `forwardSlash="${forwardslash}" \n singlestring="${singlequote}" \n contentTitle='${outputstr2}' \n content='${outputstr1}' \n landingLink='${landingLink}'`, err => {
-    console.log(err)
-  });
-
-
-
-  
 
   const fun = async () => {
     const contents = fs.readFileSync(`./uploads/${req.file.originalname}`, {encoding: 'base64'});
@@ -166,13 +159,81 @@ app.post('/', upload.single('thefilename'), (req, res) => {
         
       });
       console.log(response3);
-      console.log(contents);
+      // console.log(contents);
    console.log(req.file);
 
+
+
+// var sortDir={ 
+//   sortDir: "DESC",
+//   count: 3
+// }
+// var count=[{ 
+//   count: 3
+// }]
+// setTimeout(() => {
+  // var jim = Date.now() - (Date.now() - start);
+  var yoTime = Date.now();
+  function toIsoString(date) {
+    var tzo = date.getTimezoneOffset(),
+        dif = tzo >= 0 ? '+' : '-',
+        pad = function(num) {
+            return (num < 10 ? '0' : '') + num;
+        };
+  
+    return date.getFullYear() +
+        '-' + pad(date.getMonth() + 1) +
+        '-' + pad(date.getDate()) +
+        'T' + pad(date.getHours() + (Math.floor(Math.abs(tzo) / 60))) +
+        ':' + pad(date.getMinutes() ) +
+        ':' + pad(date.getSeconds() - 5) +
+        dif + pad(Math.floor(Math.abs(tzo) / 60)) +
+        ':' + pad(Math.abs(tzo) % 60);
+  }
+  
+  var dt = new Date();
+
+  console.log(toIsoString(dt));
+  console.log(yoTime)
+  // console.log(jim)
+  // }, 000);
+
+  //  const responseList = await client.fileManager.files(sort_dir= "DESC", count= 3);
+  //  console.log(responseList);
+  const responseList = await client.fileManager.files({sinceCreatedAt: toIsoString(dt)});
+   console.log(responseList);
+   var fileUrl = responseList.files[0].full_size_url
+   console.log(fileUrl);
+   var imageUrl= fileUrl.replace(/'/g,'${single}').replaceAll('/','${forwardSlash}');
+
+   write(__dirname + '/test.txt', `forwardSlash="${forwardslash}" \n singlestring="${singlequote}" \n contentTitle='${outputstr2}' \n content='${outputstr1}' \n image='${imageUrl}' \n landingLink='${landingLink}'`, err => {
+    console.log(err)
+  });
    
+//   const responseList = client.fileManager.files = function(sortDir, opts){
+//     opts = opts || {};
+// if (sortDir === undefined || sortDir === null){
+//  throw new Error("Missing sortDir")
+// } else {
+//   sortDir = "DESC"
+// }
+
+   
+// var queryParams = {
+//   "sort_dir": opts["sortDir"]
+// };
+//   };
+  //  const response4 = await client.fileManager.getFile("9b4f0f09-41a5-8a31-afc2-14eaeb397296");
+  // console.log(response4);
+
+  // var imageAdd = response4.id
+  // console.log(imageAdd);
+
 
    }
 
+
+   
 
 
 
@@ -199,15 +260,17 @@ app.post('/', upload.single('thefilename'), (req, res) => {
 
   setTimeout(() => {
     fun();
-   }, 1000)
+   }, 500)
+
+// need time in between to execute correctly
 
   setTimeout(() => {
    cmd();
-  }, 2000)
+  }, 3500)
 
   setTimeout(() => {
     run();
-   }, 3000)
+   }, 4500)
 
   //  setTimeout(() => {
   //   fil();
