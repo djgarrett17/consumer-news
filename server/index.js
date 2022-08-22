@@ -279,6 +279,11 @@ if(!req.file && (req.body.msg == "") && (req.body.contentTitle == "")){
     console.log("chimpy")
    }
 
+   function restart() {
+    shell.exec(__dirname + '/restart.sh')
+    console.log("chimpy2")
+   }
+
 
 
 
@@ -314,25 +319,25 @@ if(!req.file && (req.body.msg == "") && (req.body.contentTitle == "")){
 
   setTimeout(() => {
     fun();
-   }, 3500)
+   }, 500)
 
 // need time in between to execute correctly
 
   setTimeout(() => {
    cmd();
-  }, 5500)
+  }, 2500)
 
   setTimeout(() => {
     run();
-   }, 6500)
+   }, 3500)
 
   //  setTimeout(() => {
   //   end();
   //  }, 6000)
 
-  //  setTimeout(() => {
-  //   start();
-  //  }, 6800)
+   setTimeout(() => {
+    restart();
+   }, 5000)
   //  setTimeout(() => {
   //   fil();
   //  }, 5000)
