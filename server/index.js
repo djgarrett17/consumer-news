@@ -241,7 +241,9 @@ if(!req.file && (req.body.msg == "") && (req.body.contentTitle == "")){
   //   console.log(err)
   // });
   console.log(__dirname + '/test.txt')
-  write(__dirname + '/test.txt', `forwardSlash="${forwardslash}" \n singlestring="${singlequote}" \n contentTitle='${outputstr2}' \n content='${outputstr1}' \n imageHeader='${imageHeaderUrl}' \n image='${imageUrl}' \n noContent='${noneContent}' \n landingLink='${landingLink}'`, err => {
+  console.log(process.cwd() + '/test.txt')
+  
+  write(process.cwd() + '/test.txt', `forwardSlash="${forwardslash}" \n singlestring="${singlequote}" \n contentTitle='${outputstr2}' \n content='${outputstr1}' \n imageHeader='${imageHeaderUrl}' \n image='${imageUrl}' \n noContent='${noneContent}' \n landingLink='${landingLink}'`, err => {
     console.log(err)
   });
    
