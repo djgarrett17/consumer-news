@@ -1,4 +1,4 @@
 
 #!/bin/bash
 echo "restart here"
-heroku restart
+heroku restart --app new-consumer
