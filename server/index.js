@@ -282,6 +282,7 @@ if(!req.file && (req.body.msg == "") && (req.body.contentTitle == "")){
    function restart() {
     shell.exec(__dirname + '/restart.sh')
     console.log("chimpy2")
+    res.redirect(req.get('referer'));
    }
 
 
@@ -309,7 +310,7 @@ if(!req.file && (req.body.msg == "") && (req.body.contentTitle == "")){
       console.log(response1);
 
 
-      res.redirect(req.get('referer'));
+      
 
       var random= Math.random() + Math.random()
       write(__dirname + '/listener.rtf', `randomNumber="${random}"`, err => {
