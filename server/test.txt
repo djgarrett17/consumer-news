@@ -1,8 +1,8 @@
 forwardSlash="/" 
  singlestring="\'" 
- contentTitle='3rtfrsg' 
- content='rsgbndsgbnset' 
- imageHeader='https:${forwardSlash}${forwardSlash}mcusercontent.com${forwardSlash}11010af2fb12955cb8611ec8d${forwardSlash}images${forwardSlash}5038883c-58ed-4a41-911d-cbb684ce6169.png' 
- image='https:${forwardSlash}${forwardSlash}mcusercontent.com${forwardSlash}c4fd8980badfdb476a3474815${forwardSlash}images${forwardSlash}a6d07535-0bc9-6815-bee1-1c503c57ebd5.jpg' 
- noContent='' 
- landingLink='https:${forwardSlash}${forwardSlash}us5.admin.mailchimp.com${forwardSlash}campaigns${forwardSlash}#f_list:63105;f_assigned:unassigned;f_search:web%20marketing;t:campaigns-list'
+ contentTitle='' 
+ content='' 
+ imageHeader='https:${forwardSlash}${forwardSlash}mcusercontent.com${forwardSlash}0a04777f1cfaf1db009e2e7aa${forwardSlash}images${forwardSlash}d1d0ae1e-bbdf-2f5a-7d93-f8fad0e88464.jpg' 
+ image='undefined' 
+ noContent='display: none;' 
+ landingLink=''
