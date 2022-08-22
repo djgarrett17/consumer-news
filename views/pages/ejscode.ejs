@@ -1,40 +1,53 @@
 <html>
-<body>
+    <head>
+    <link href="/server/style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet/less" type="text/css" href="/server/style.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less" ></script> -->
+</head>
+<body class="bodyContainer">
 
-<div>
-        <h1 id="portTitle">
-                Home
+<div class="pageContainer">
+        <h1 class="consumerTitle">
+                Consumer E-Newsletter Form
            </h1>
 
-           <div className="badgeEdge"></div>
+           <div class="badgeEdge"></div>
 
-            <div>
-                   <form action="/" method="post" enctype='multipart/form-data'>
+            <div class="formContainer">
+                   <form class="fullForm" action="/" method="post" enctype='multipart/form-data'>
+                    <div>
+                        <p class="instructions fullWidth" type="text"><span class="instructionsTitle">Instructions to fill out the form:</span><br><br>
+                        If you plan on including custom content, please fill out the full form, otherwise input only the "Choose your agency" field.
+                        </p>
+                    </div>
                         <div>
-                            <select id="selAgency" name="agency">
+                            <select class="agencySelect fullWidth" id="selAgency" name="agency">
                                 <option value="">-- Choose your agency --</option>
-                                <option value="India">Guru Travel</option>
-                                <option value="Japan">Starship Travel</option>
-                                <option value="USA">Extreme Destinations Travel</option>
+                                <option value="blueHorizon">Blue Horizon</option>
+                                <option value="townCountryTravel">Town & Country Travel</option>
+                                <option value="caryTravelExpress">Cary Travel Express</option>
                             </select>
                         </div>
                         <div>
-                            <input type="text" id="copyTitle" name="contentTitle" placeholder="Intro Copy Title" />
+                            <input class="titleCopy fullWidth" type="text" id="copyTitle" name="contentTitle" placeholder="Intro Copy Title" />
                         </div>
                         <div>
-                            <textarea id="msg" name="msg" placeholder="Intro Copy"></textarea>
+                            <textarea class="bodyCopy fullWidth" id="msg" name="msg" placeholder="Intro Copy"></textarea>
                         </div>
                         <div>
-                            <input type="text" id="copyTitle" name="landinglink" placeholder="Link to Landing Page" />
+                            <input class="linkLanding fullWidth" type="text" id="copyTitle" name="landinglink" placeholder="Link to Landing Page" />
                         </div>
                         <div>
-                            <input type="file" id="myFile" name="thefilename">
+                            <input class="fileUpload fullWidth" type="file" id="myFile" name="thefilename">
                         </div>
                         <div>
                             <img id="output" width="200" />
                         </div>
                         <div>
-                            <input type="submit" id="bt" value="Save data to file" />
+                            <input class="submitButton fullWidth" type="submit" id="bt" value="Save data to file" />
                         </div>
                     </form>
             </div>

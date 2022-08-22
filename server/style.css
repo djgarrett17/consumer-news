@@ -1,0 +1,67 @@
+.bodyContainer{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    background-color: lightblue;
+    font-family: 'Open Sans', sans-serif;
+}
+.pageContainer{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    background-color: lightblue;
+    padding-top: 20px;
+}
+.consumerTitle{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+.formContainer{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.fullForm{
+    width: 700px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display:flex;
+    flex-direction: column;
+    padding: 20px 20px 20px 20px;
+    /* align-items: center; */
+}
+.instructionsTitle{
+    font-weight: bold;
+    font-size: 20px;
+}
+.fullWidth{
+    width: 100%;
+    padding: 12px 10px 12px 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+.agencySelect{
+    margin-bottom: 15px;
+}
+.titleCopy{
+    margin-bottom: 15px;
+}
+.bodyCopy{
+    margin-bottom: 15px;
+    height: 140px;
+    max-width: 700px;
+}
+.linkLanding{
+    margin-bottom: 15px;
+}
+.fileUpload{
+    margin-bottom: 15px;
+}
+.submitButton{
+    margin-bottom: 15px;
+}

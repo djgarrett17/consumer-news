@@ -47,6 +47,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(morgan('dev'));
 app.use('/server', express.static("server"));
+// app.use('/client/public', express.static("public"));
 // app.use(bodyParser.urlencoded({extended:true}));
 
 app.get('/', function(req, res) {
@@ -118,13 +119,12 @@ app.post('/', upload.single('thefilename'), (req, res) => {
   console.log(req.body.msg);
   console.log(req.body.contentTitle);
   console.log(req.body.landinglink);
-  console.log(req.file.filename);
-  // console.log(file.req.body.thefilename);
-  console.log(req.file);
-  console.log(req.file.fieldname);
-  console.log(req.file.originalname);
-  console.log(__dirname);
-  console.log(process.cwd() + "/" + req.file.path);
+  // console.log(req.file.filename);
+  // console.log(req.file);
+  // console.log(req.file.fieldname);
+  // console.log(req.file.originalname);
+  // console.log(__dirname);
+  // console.log(process.cwd() + "/" + req.file.path);
 
   
 
@@ -148,6 +148,8 @@ app.post('/', upload.single('thefilename'), (req, res) => {
 
 
   const fun = async () => {
+
+    if(req.file){
     const contents = fs.readFileSync(`./uploads/${req.file.originalname}`, {encoding: 'base64'});
   
 // let menny3 = btoa(process.cwd() + "/" + req.file.path);
@@ -158,9 +160,11 @@ app.post('/', upload.single('thefilename'), (req, res) => {
         file_data: contents,
         
       });
-      console.log(response3);
+
+    }
+      // console.log(response3);
       // console.log(contents);
-   console.log(req.file);
+  //  console.log(req.file);
 
 
 
@@ -202,11 +206,38 @@ app.post('/', upload.single('thefilename'), (req, res) => {
   //  console.log(responseList);
   const responseList = await client.fileManager.files({sinceCreatedAt: toIsoString(dt)});
    console.log(responseList);
+
+   if(req.file){
    var fileUrl = responseList.files[0].full_size_url
    console.log(fileUrl);
    var imageUrl= fileUrl.replace(/'/g,'${single}').replaceAll('/','${forwardSlash}');
+   }
 
-   write(__dirname + '/test.txt', `forwardSlash="${forwardslash}" \n singlestring="${singlequote}" \n contentTitle='${outputstr2}' \n content='${outputstr1}' \n image='${imageUrl}' \n landingLink='${landingLink}'`, err => {
+
+   const dropDown =
+    {
+      blueHorizon: "https://mcusercontent.com/11010af2fb12955cb8611ec8d/images/5038883c-58ed-4a41-911d-cbb684ce6169.png",
+      townCountryTravel: "https://mcusercontent.com/663433d5d70d635e4e3bf14a6/images/42040f38-2610-4fed-a5dc-0c294737ef9e.png",
+      caryTravelExpress: "https://mcusercontent.com/0a04777f1cfaf1db009e2e7aa/images/d1d0ae1e-bbdf-2f5a-7d93-f8fad0e88464.jpg"
+    }
+
+  
+    console.log(dropDown)
+const agencyName = req.body.agency
+console.log(agencyName)
+
+var selAgency = dropDown[agencyName]
+console.log(selAgency)
+
+   var imageHeaderUrl= selAgency.replace(/'/g,'${single}').replaceAll('/','${forwardSlash}');
+
+if(!req.file && (req.body.msg == "") && (req.body.contentTitle == "")){
+   var noneContent = `display: none;`
+} else{
+  var noneContent = ""
+}
+
+   write(__dirname + '/test.txt', `forwardSlash="${forwardslash}" \n singlestring="${singlequote}" \n contentTitle='${outputstr2}' \n content='${outputstr1}' \n imageHeader='${imageHeaderUrl}' \n image='${imageUrl}' \n noContent='${noneContent}' \n landingLink='${landingLink}'`, err => {
     console.log(err)
   });
    
@@ -244,18 +275,35 @@ app.post('/', upload.single('thefilename'), (req, res) => {
 
 
 
+
   async function run() {
     var myTextFile = require('../server/consumer-1.txt')
     const response = await mailchimp.ping.get();
     console.log(response);
 
-    const response1 = await client.templates.updateTemplate("10000060", {
-        name: "Consumer-News-Template",
+
+    const templateNumber =
+    {
+      blueHorizon: 10000072,
+      townCountryTravel: 10000068,
+      caryTravelExpress: 10000076
+    }
+    var agencyName = req.body.agency
+    var templateVariable = templateNumber[agencyName]
+
+    const response1 = await client.templates.updateTemplate(templateVariable, {
+        name: `"Consumer-News-Template-${agencyName}"`,
         html: myTextFile,
       });
       console.log(response1);
 
-      
+
+      res.redirect(req.get('referer'));
+
+      var random= Math.random() + Math.random()
+      write(__dirname + '/listener.rtf', `randomNumber="${random}"`, err => {
+        console.log(err)
+      });
   }
 
   setTimeout(() => {
@@ -272,6 +320,13 @@ app.post('/', upload.single('thefilename'), (req, res) => {
     run();
    }, 4500)
 
+  //  setTimeout(() => {
+  //   end();
+  //  }, 6000)
+
+  //  setTimeout(() => {
+  //   start();
+  //  }, 6800)
   //  setTimeout(() => {
   //   fil();
   //  }, 5000)
