@@ -1,7 +1,7 @@
 
 #!/bin/bash
 echo "Stay Home"
-source . /server/test.txt
+source . ./test.txt
 echo $content
 echo $contentTitle
 echo $landingLink
