@@ -237,9 +237,12 @@ if(!req.file && (req.body.msg == "") && (req.body.contentTitle == "")){
   var noneContent = ""
 }
 
-   write(__dirname + '/test.txt', `forwardSlash="${forwardslash}" \n singlestring="${singlequote}" \n contentTitle='${outputstr2}' \n content='${outputstr1}' \n imageHeader='${imageHeaderUrl}' \n image='${imageUrl}' \n noContent='${noneContent}' \n landingLink='${landingLink}'`, err => {
+   write(path.join(__dirname, 'test.txt'), `forwardSlash="${forwardslash}" \n singlestring="${singlequote}" \n contentTitle='${outputstr2}' \n content='${outputstr1}' \n imageHeader='${imageHeaderUrl}' \n image='${imageUrl}' \n noContent='${noneContent}' \n landingLink='${landingLink}'`, err => {
     console.log(err)
   });
+  // write(__dirname + '/test.txt', `forwardSlash="${forwardslash}" \n singlestring="${singlequote}" \n contentTitle='${outputstr2}' \n content='${outputstr1}' \n imageHeader='${imageHeaderUrl}' \n image='${imageUrl}' \n noContent='${noneContent}' \n landingLink='${landingLink}'`, err => {
+  //   console.log(err)
+  // });
    
 //   const responseList = client.fileManager.files = function(sortDir, opts){
 //     opts = opts || {};
