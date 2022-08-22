@@ -1,7 +1,7 @@
 
 #!/bin/bash
 echo "Stay Home"
-. ./test.txt
+. ./server/test.txt
 echo ". ./server/test.txt"
 echo $content
 echo $contentTitle
