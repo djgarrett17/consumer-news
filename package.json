@@ -2,14 +2,16 @@
   "name": "new-consumer",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "18.6"
+  },
   "main": "index.js",
   "nodemonConfig": {
     "watch": [
       "server/"
     ],
     "ext": "js,json,rtf",
-    "ignore": ["node_modules", ".git"],
-    "delay": "4"
+    "ignore": ["node_modules", ".git"]
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

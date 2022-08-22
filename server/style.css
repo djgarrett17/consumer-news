@@ -4,7 +4,7 @@
     display:flex;
     flex-direction:column;
     align-items: center;
-    background-color: lightblue;
+    background-color: darkblue;
     font-family: 'Open Sans', sans-serif;
 }
 .pageContainer{
@@ -13,7 +13,7 @@
     display:flex;
     flex-direction:column;
     align-items: center;
-    background-color: lightblue;
+    background-color: darkblue;
     padding-top: 20px;
 }
 .consumerTitle{

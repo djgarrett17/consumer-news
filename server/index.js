@@ -112,13 +112,13 @@ client.setConfig({
 
 
 app.post('/', upload.single('thefilename'), (req, res) => {
-  console.log(req.body.fname);
+  // console.log(req.body.fname);
   // const x = "&ldquo;"
   // const z = "&lsquo;"
 
-  console.log(req.body.msg);
-  console.log(req.body.contentTitle);
-  console.log(req.body.landinglink);
+  // console.log(req.body.msg);
+  // console.log(req.body.contentTitle);
+  // console.log(req.body.landinglink);
   // console.log(req.file.filename);
   // console.log(req.file);
   // console.log(req.file.fieldname);
@@ -308,17 +308,17 @@ if(!req.file && (req.body.msg == "") && (req.body.contentTitle == "")){
 
   setTimeout(() => {
     fun();
-   }, 500)
+   }, 3500)
 
 // need time in between to execute correctly
 
   setTimeout(() => {
    cmd();
-  }, 3500)
+  }, 5500)
 
   setTimeout(() => {
     run();
-   }, 4500)
+   }, 6500)
 
   //  setTimeout(() => {
   //   end();
