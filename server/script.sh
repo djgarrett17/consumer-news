@@ -2,7 +2,7 @@
 #!/bin/bash
 echo "Stay Home"
 . ./test.txt
-echo ". ./test.txt"
+echo ". ./server/test.txt"
 echo $content
 echo $contentTitle
 echo $landingLink
