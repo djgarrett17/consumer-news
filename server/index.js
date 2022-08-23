@@ -15,6 +15,9 @@ const path = require('path');
 const fs = require('fs');
 // const upload = multer({dest: 'uploads/'});
 
+var request = require('request');
+var token = process.env.REACT_APP_API_KEY;
+
 
 // app.use(express.static(__dirname, 'server'));
 app.set('view engine', 'ejs');
@@ -281,11 +284,11 @@ if(!req.file && (req.body.msg == "") && (req.body.contentTitle == "")){
 
    function restart() {
 
-    var token = process.env.REACT_APP_API_KEY;
+    
 var appName = 'consumer-e-newsletter';
 var dynoName = 'web.1';
 
-var request = require('request');
+
 
 request.delete(
     {

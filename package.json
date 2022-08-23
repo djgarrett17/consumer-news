@@ -11,7 +11,10 @@
       "server/"
     ],
     "ext": "js,json,rtf",
-    "ignore": ["node_modules", ".git"]
+    "ignore": [
+      "node_modules",
+      ".git"
+    ]
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -33,6 +36,7 @@
     "multer": "^1.4.5-lts.1",
     "path": "^0.12.7",
     "react-router-dom": "^6.3.0",
+    "request": "^2.88.2",
     "shelljs": "^0.8.5",
     "stringify": "^5.2.0",
     "write": "^2.0.0"
