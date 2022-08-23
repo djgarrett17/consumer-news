@@ -14,7 +14,7 @@ const morgan = require("morgan");
 const path = require('path');
 const fs = require('fs');
 // const upload = multer({dest: 'uploads/'});
-
+var api= process.env.REACT_APP_API_KEY
 
 // app.use(express.static(__dirname, 'server'));
 app.set('view engine', 'ejs');
