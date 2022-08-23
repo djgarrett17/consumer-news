@@ -1,7 +1,9 @@
 
 #!/bin/bash
 set -a
-. /env
+. /etc/profile
+. ~/.bash_profile
+. ~/.bashrc
 set +a
 echo "restart here2"
 echo $REACT_APP_API_KEY
