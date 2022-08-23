@@ -21,7 +21,9 @@
     "start": "node server/index.js",
     "start:dev": "nodemon server/index.js"
   },
-  "keywords": [],
+  "keywords": [
+    "heroku"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
