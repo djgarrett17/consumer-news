@@ -1,9 +1,5 @@
 
 #!/bin/bash
-set -a
-. ~/.bash_profile
-. ~/.bashrc
-set +a
 echo "restart here2"
 echo $REACT_APP_API_KEY
 curl -n -X DELETE https://api.heroku.com/apps/consumer-e-newsletter/dynos \
