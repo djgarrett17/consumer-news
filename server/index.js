@@ -350,8 +350,14 @@ if(!req.file && (req.body.msg == "") && (req.body.contentTitle == "")){
 
 });
 
-res.redirect('https://consumer-e-newsletter.herokuapp.com/');
-    res.redirect(req.get('referer'));
+app.get('/',function(req,res){
+  // On getting the home route request,
+  // the user will be redirected to GFG website
+  res.redirect('https://consumer-e-newsletter.herokuapp.com/');
+  // res.redirect(req.get('referer'));
+});
+
+    
 
 // app.post('/', upload.single('file'), (req, res) => {
 //   if (!req.file) {
