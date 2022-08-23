@@ -284,29 +284,11 @@ if(!req.file && (req.body.msg == "") && (req.body.contentTitle == "")){
 
    function restart() {
 
-    
-var appName = 'consumer-e-newsletter';
-var dynoName = 'web.1';
-
-
-
-request.delete(
-    {
-        url: 'https://api.heroku.com/apps/' + appName + '/dynos/',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/vnd.heroku+json; version=3',
-            'Authorization': 'Bearer ' + token
-        }
-    },
-    function(error, response, body) {
-        // Do stuff
-        console.log(error)
-    }
-);
+    res.redirect(req.get('referer'))
+    process.exit()
     // shell.exec(__dirname + '/restart.sh')
     // console.log("chimpy2")
-    res.redirect(req.get('referer'));
+    ;
    }
 
 
