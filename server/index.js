@@ -282,7 +282,7 @@ if(!req.file && (req.body.msg == "") && (req.body.contentTitle == "")){
    function restart() {
 
  
-    process.kill(process.pid)
+    process.kill(8090)
     
     res.redirect(req.get('referer'))
     // process.exit()
