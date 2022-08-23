@@ -281,10 +281,11 @@ if(!req.file && (req.body.msg == "") && (req.body.contentTitle == "")){
 
    function restart() {
 
-    res.redirect(req.get('referer'))
+    return res.redirect(req.get('referer'))
     // process.exit(0)
-    location.reload()
-    
+    // location.reload()
+    // <Link to={location}/>
+{/* <Redirect to={location}/> */}
     // process.exit()
     // shell.exec(__dirname + '/restart.sh')
     // console.log("chimpy2")
