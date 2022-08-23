@@ -282,11 +282,11 @@ if(!req.file && (req.body.msg == "") && (req.body.contentTitle == "")){
    function restart() {
 
     // res.redirect('https://consumer-e-newsletter.herokuapp.com/');
-    res.redirect(req.get('referer'));
+    // res.redirect(req.get('referer'));
     // process.exit(0)
    
-    // shell.exec(__dirname + '/restart.sh')
-    // console.log("chimpy2")
+    shell.exec(__dirname + '/restart.sh')
+    console.log("chimpy2")
     
    }
 
@@ -350,12 +350,11 @@ if(!req.file && (req.body.msg == "") && (req.body.contentTitle == "")){
 
 });
 
-app.get('/',function(req,res){
-  // On getting the home route request,
-  // the user will be redirected to GFG website
-  res.redirect('https://consumer-e-newsletter.herokuapp.com/');
+// app.get('/',function(req,res){
+ 
+//   res.redirect('https://consumer-e-newsletter.herokuapp.com/');
   // res.redirect(req.get('referer'));
-});
+// });
 
     
 
