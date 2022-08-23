@@ -1,4 +1,4 @@
 
 #!/bin/bash
 echo "restart here"
-heroku restart
+chmod u+x heroku.sh && ./heroku.sh
