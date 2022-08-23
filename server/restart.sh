@@ -1,5 +1,8 @@
 
 #!/bin/bash
+set -a
+source .env
+set +a
 . ./env
 echo "restart here2"
 echo $REACT_APP_API_KEY
