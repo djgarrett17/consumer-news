@@ -283,11 +283,11 @@ if(!req.file && (req.body.msg == "") && (req.body.contentTitle == "")){
 
    function restart() {
 
-  function main() {
+ 
       if (process.env.process_restarting) {
         delete process.env.process_restarting;
         // Give old process one second to shut down before continuing ...
-        setTimeout(main, 1000);
+        setTimeout(1000);
         return;
       }
     
@@ -298,8 +298,7 @@ if(!req.file && (req.body.msg == "") && (req.body.contentTitle == "")){
         env: { process_restarting: 1 },
         stdio: 'ignore',
       }).unref();
-    };
-    main();
+    
     res.redirect(req.get('referer'))
     // process.exit()
     // shell.exec(__dirname + '/restart.sh')
