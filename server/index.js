@@ -14,7 +14,6 @@ const morgan = require("morgan");
 const path = require('path');
 const fs = require('fs');
 // const upload = multer({dest: 'uploads/'});
-var api= process.env.REACT_APP_API_KEY
 
 // app.use(express.static(__dirname, 'server'));
 app.set('view engine', 'ejs');
@@ -284,8 +283,11 @@ if(!req.file && (req.body.msg == "") && (req.body.contentTitle == "")){
     // res.redirect('https://consumer-e-newsletter.herokuapp.com/');
     // res.redirect(req.get('referer'));
     // process.exit(0)
+    var api= process.env.REACT_APP_API_KEY
+
+shell.exec(`REACT_APP_API_KEY=${api} sh /restart.sh`);
    
-    shell.exec(__dirname + '/restart.sh')
+    // shell.exec(__dirname + '/restart.sh')
     console.log("chimpy2")
     
    }

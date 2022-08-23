@@ -1,7 +1,6 @@
 
 #!/bin/bash
 set -a
-. /etc/profile
 . ~/.bash_profile
 . ~/.bashrc
 set +a
