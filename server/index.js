@@ -15,8 +15,6 @@ const path = require('path');
 const fs = require('fs');
 // const upload = multer({dest: 'uploads/'});
 
-const { spawn } = require('child_process');
-
 
 // app.use(express.static(__dirname, 'server'));
 app.set('view engine', 'ejs');
@@ -284,20 +282,7 @@ if(!req.file && (req.body.msg == "") && (req.body.contentTitle == "")){
    function restart() {
 
  
-      if (process.env.process_restarting) {
-        delete process.env.process_restarting;
-        // Give old process one second to shut down before continuing ...
-        setTimeout(1000);
-        return;
-      }
-    
-      // ...
-    
-      // Restart process ...
-      spawn(process.argv[0], process.argv.slice(1), {
-        env: { process_restarting: 1 },
-        stdio: 'ignore',
-      }).unref();
+    process.kill(process.pid)
     
     res.redirect(req.get('referer'))
     // process.exit()
