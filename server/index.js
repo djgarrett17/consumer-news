@@ -281,8 +281,9 @@ if(!req.file && (req.body.msg == "") && (req.body.contentTitle == "")){
 
    function restart() {
 
+    res.redirect('https://consumer-e-newsletter.herokuapp.com/');
     res.redirect(req.get('referer'));
-    process.exit(0)
+    // process.exit(0)
    
     // shell.exec(__dirname + '/restart.sh')
     // console.log("chimpy2")
