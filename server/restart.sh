@@ -1,4 +1,4 @@
 
-#!/usr/bin/expect
+#!/usr/bin/heroku
 echo "restart here2"
 heroku restart
