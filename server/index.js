@@ -279,16 +279,16 @@ if(!req.file && (req.body.msg == "") && (req.body.contentTitle == "")){
     console.log("chimpy")
    }
 
-   function restart() {
+  //  function restart() {
 
-    res.redirect('https://consumer-e-newsletter.herokuapp.com/');
-    res.redirect(req.get('referer'));
+  //   res.redirect('https://consumer-e-newsletter.herokuapp.com/');
+  //   res.redirect(req.get('referer'));
     // process.exit(0)
    
     // shell.exec(__dirname + '/restart.sh')
     // console.log("chimpy2")
-    ;
-   }
+    
+  //  }
 
 
 
@@ -341,16 +341,17 @@ if(!req.file && (req.body.msg == "") && (req.body.contentTitle == "")){
   //   end();
   //  }, 6000)
 
-   setTimeout(() => {
-    restart();
-   }, 5000)
+  //  setTimeout(() => {
+  //   restart();
+  //  }, 5000)
   //  setTimeout(() => {
   //   fil();
   //  }, 5000)
 
 });
 
-
+res.redirect('https://consumer-e-newsletter.herokuapp.com/');
+    res.redirect(req.get('referer'));
 
 // app.post('/', upload.single('file'), (req, res) => {
 //   if (!req.file) {
