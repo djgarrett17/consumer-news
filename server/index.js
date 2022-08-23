@@ -183,16 +183,38 @@ app.post('/', upload.single('thefilename'), (req, res) => {
         pad = function(num) {
             return (num < 10 ? '0' : '') + num;
         };
-  
+        
+        var hours = date.getHours()
+        var floor = (Math.floor(Math.abs(tzo) / 60))
+        
+        
+
+        if(dif === "+"){
+          console.log("positive")
+          var hoursTime = parseInt(hours) + parseInt(floor)
+        } else if (dif === "-"){
+          console.log("negative")
+          var hoursTime = parseInt(hours) - parseInt(floor)
+        } else{
+          console.log("unexpected")
+        }
+        console.log(hoursTime);
+        console.log(dif);
+        console.log(tzo);
+        console.log((Math.floor(Math.abs(tzo) / 60)));
+        
+        
     return date.getFullYear() +
         '-' + pad(date.getMonth() + 1) +
         '-' + pad(date.getDate()) +
-        'T' + pad(date.getHours() + (Math.floor(Math.abs(tzo) / 60))) +
+        'T' + pad(hoursTime) +
         ':' + pad(date.getMinutes() ) +
         ':' + pad(date.getSeconds() - 5) +
         dif + pad(Math.floor(Math.abs(tzo) / 60)) +
         ':' + pad(Math.abs(tzo) % 60);
   }
+  
+  
   
   var dt = new Date();
 
