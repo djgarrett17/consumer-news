@@ -281,7 +281,7 @@ if(!req.file && (req.body.msg == "") && (req.body.contentTitle == "")){
    function restart() {
 
     // res.redirect('https://consumer-e-newsletter.herokuapp.com/');
-    // res.redirect(req.get('referer'));
+    
     // process.exit(0)
     var api= process.env.HEROKU_API_KEY
 
@@ -289,7 +289,8 @@ shell.exec(`HEROKU_API_KEY=${api} sh ${__dirname}/restart.sh`);
    
     // shell.exec(__dirname + '/restart.sh')
     console.log("chimpy2")
-    
+    res.redirect(req.get('referer'));
+    console.log("chimpy3")
    }
 
 
