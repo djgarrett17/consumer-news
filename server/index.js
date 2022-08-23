@@ -285,7 +285,7 @@ if(!req.file && (req.body.msg == "") && (req.body.contentTitle == "")){
     // process.exit(0)
     var api= process.env.REACT_APP_API_KEY
 
-shell.exec(`REACT_APP_API_KEY=${api} sh /restart.sh`);
+shell.exec(`REACT_APP_API_KEY=${api} sh ${__dirname}/restart.sh`);
    
     // shell.exec(__dirname + '/restart.sh')
     console.log("chimpy2")
