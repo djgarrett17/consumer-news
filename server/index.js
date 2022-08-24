@@ -133,11 +133,12 @@ app.post('/', upload.single('thefilename'), (req, res) => {
   // });
 
 
-
-  var outputstr1= req.body.msg.replace(/'/g,'${single}').replaceAll('/','${forwardSlash}');
+  var outputstr1= req.body.msg.replace(/'/g,'${single}').replaceAll('/','${forwardSlash}').replaceAll(decodeURIComponent('%0D%0A'),'${semicolon}').replaceAll(decodeURIComponent('%0A'),'${semicolon}');
+  // var outputstr1= req.body.msg.replace(/'/g,'${single}').replaceAll('/','${forwardSlash}').replace(/\r\n/g,'${semicolon}').replace(/\n/g,'${semicolon}');
   var outputstr2= req.body.contentTitle.replace(/'/g,'${single}').replaceAll('/','${forwardSlash}');
   var singlequote="\\'";
   var forwardslash="/";
+  var semicolon=" <br> ";
   var landingLink= req.body.landinglink.replace(/'/g,'${single}').replaceAll('/','${forwardSlash}');
   // var ogname = req.file.originalname
   
@@ -264,7 +265,7 @@ if(!req.file && (req.body.msg == "") && (req.body.contentTitle == "")){
   console.log(__dirname + '/test.txt')
   console.log(process.cwd() + '/test.txt')
   
-  write('server/test.txt', `forwardSlash="${forwardslash}" \n singlestring="${singlequote}" \n contentTitle='${outputstr2}' \n content='${outputstr1}' \n imageHeader='${imageHeaderUrl}' \n image='${imageUrl}' \n noContent='${noneContent}' \n landingLink='${landingLink}'`, err => {
+  write('server/test.txt', `forwardSlash="${forwardslash}" \n backslash="${backslash}" \n singlestring="${singlequote}" \n semicolon="${semicolon}" \n contentTitle='${outputstr2}' \n content='${outputstr1}' \n imageHeader='${imageHeaderUrl}' \n image='${imageUrl}' \n noContent='${noneContent}' \n landingLink='${landingLink}'`, err => {
     console.log(err)
   });
    

@@ -1,8 +1,10 @@
 forwardSlash="/" 
+ backslash="\\\\" 
  singlestring="\'" 
- contentTitle='All Day Long Code' 
- content='ww' 
+ semicolon=" <br> " 
+ contentTitle='' 
+ content='All D${semicolon}${semicolon}All Day Long Coden${single}s, "YES"${semicolon}All Day Long Coden${single}s, "YES"All Day Long Coden${single}s, "YES"' 
  imageHeader='https:${forwardSlash}${forwardSlash}mcusercontent.com${forwardSlash}0a04777f1cfaf1db009e2e7aa${forwardSlash}images${forwardSlash}d1d0ae1e-bbdf-2f5a-7d93-f8fad0e88464.jpg' 
- image='https:${forwardSlash}${forwardSlash}mcusercontent.com${forwardSlash}c4fd8980badfdb476a3474815${forwardSlash}images${forwardSlash}69032d59-f0b0-d065-a6eb-0471bec73ad8.jpg' 
+ image='undefined' 
  noContent='' 
  landingLink=''
