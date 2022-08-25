@@ -143,35 +143,6 @@ app.post('/', upload.single('thefilename'), (req, res) => {
   // var ogname = req.file.originalname
   
 
-  var dropDown =
-    {
-      blueHorizon: "https://mcusercontent.com/11010af2fb12955cb8611ec8d/images/5038883c-58ed-4a41-911d-cbb684ce6169.png",
-      townCountryTravel: "https://mcusercontent.com/663433d5d70d635e4e3bf14a6/images/42040f38-2610-4fed-a5dc-0c294737ef9e.png",
-      caryTravelExpress: "https://mcusercontent.com/0a04777f1cfaf1db009e2e7aa/images/d1d0ae1e-bbdf-2f5a-7d93-f8fad0e88464.jpg"
-    }
-
-  
-    console.log(dropDown)
-var agencyName = req.body.agency
-console.log(agencyName)
-
-var selAgency = dropDown[agencyName]
-console.log(selAgency)
-
-
-
-
-
-
-var templateNumber =
-   {
-     blueHorizon: 10000072,
-     townCountryTravel: 10000068,
-     caryTravelExpress: 10000076
-   }
-   var agencyName = req.body.agency
-   var templateVariable = templateNumber[agencyName]
-   console.log(templateVariable);
 
 
 
@@ -253,7 +224,6 @@ var templateNumber =
   // console.log(jim)
   // }, 000);
 
-  
   //  const responseList = await client.fileManager.files(sort_dir= "DESC", count= 3);
   //  console.log(responseList);
   const responseList = await client.fileManager.files({sinceCreatedAt: toIsoString(dt)});
@@ -266,7 +236,20 @@ var templateNumber =
    }
 
 
+  var dropDown =
+    {
+      blueHorizon: "https://mcusercontent.com/11010af2fb12955cb8611ec8d/images/5038883c-58ed-4a41-911d-cbb684ce6169.png",
+      townCountryTravel: "https://mcusercontent.com/663433d5d70d635e4e3bf14a6/images/42040f38-2610-4fed-a5dc-0c294737ef9e.png",
+      caryTravelExpress: "https://mcusercontent.com/0a04777f1cfaf1db009e2e7aa/images/d1d0ae1e-bbdf-2f5a-7d93-f8fad0e88464.jpg"
+    }
+
   
+    console.log(dropDown)
+const agencyName = req.body.agency
+console.log(agencyName)
+
+var selAgency = dropDown[agencyName]
+console.log(selAgency)
 
    var imageHeaderUrl= selAgency.replace(/'/g,'${single}').replaceAll('/','${forwardSlash}');
 
@@ -341,7 +324,15 @@ shell.exec(`HEROKU_API_KEY=${api} sh ${__dirname}/restart.sh`);
    }
 
 
-   
+   var templateNumber =
+   {
+     blueHorizon: 10000072,
+     townCountryTravel: 10000068,
+     caryTravelExpress: 10000076
+   }
+   var agencyName = req.body.agency
+   var templateVariable = templateNumber[agencyName]
+   console.log(templateVariable);
 
 
   async function run() {
@@ -367,55 +358,55 @@ shell.exec(`HEROKU_API_KEY=${api} sh ${__dirname}/restart.sh`);
       //   console.log(err)
       // });
   }
-  function funcOne(...cb) {
-    console.log("one");
-    fun();
-    cb.forEach(s => s.apply());
-}
-
-function funcTwo() {
-  cmd();
-    console.log("two");
-}
-
-function funcThree() {
-  run();
-    console.log("three");
-}
-function funcFour() {
-  restart();
-    console.log("four");
-}
-function funcFive() {
-  restart2();
-    console.log("five");
-}
-
-
-funcOne(funcTwo, funcThree, funcFour, funcFive);
-// funcOne(funcTwo, funcThree);
-//   setTimeout(() => {
+//   function funcOne(...cb) {
+//     console.log("one");
 //     fun();
-//    }, 100)
+//     cb.forEach(s => s.apply());
+// }
+
+// function funcTwo() {
+//   cmd();
+//     console.log("two");
+// }
+
+// function funcThree() {
+//   run();
+//     console.log("three");
+// }
+// function funcFour() {
+//   restart();
+//     console.log("four");
+// }
+// function funcFive() {
+//   restart2();
+//     console.log("five");
+// }
+
+
+// funcOne(funcTwo, funcThree, funcFour, funcFive);
+// funcOne(funcTwo, funcThree);
+  setTimeout(() => {
+    fun();
+   }, 10)
 
 // need time in between to execute correctly
 
-  // setTimeout(() => {
-  //  cmd();
-  // }, 2300)
+  setTimeout(() => {
+   cmd();
+  }, 2800)
 
-  // setTimeout(() => {
-  //   run();
-  //  }, 3500)
+  setTimeout(() => {
+    run();
+   }, 3500)
 
 
-  //  setTimeout(() => {
-  //   restart();
-  //  }, 4800)
+   setTimeout(() => {
+    restart();
+   }, 4800)
 
-  //  setTimeout(() => {
-  //   restart2();
-  //  }, 5400)
+   setTimeout(() => {
+    restart2();
+   }, 5400)
  
 
 });
