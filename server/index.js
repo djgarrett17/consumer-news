@@ -312,8 +312,15 @@ shell.exec(`HEROKU_API_KEY=${api} sh ${__dirname}/restart.sh`);
    
     // shell.exec(__dirname + '/restart.sh')
     console.log("chimpy2")
-    res.redirect(req.get('referer'));
+   
+   }
+
+
+   function restart2() {
+
     console.log("chimpy3")
+    res.redirect(req.get('referer'));
+    
    }
 
 
@@ -351,17 +358,17 @@ shell.exec(`HEROKU_API_KEY=${api} sh ${__dirname}/restart.sh`);
 
   setTimeout(() => {
     fun();
-   }, 500)
+   }, 200)
 
 // need time in between to execute correctly
 
   setTimeout(() => {
    cmd();
-  }, 2800)
+  }, 2500)
 
   setTimeout(() => {
     run();
-   }, 3800)
+   }, 3500)
 
   //  setTimeout(() => {
   //   end();
@@ -369,7 +376,11 @@ shell.exec(`HEROKU_API_KEY=${api} sh ${__dirname}/restart.sh`);
 
    setTimeout(() => {
     restart();
-   }, 5800)
+   }, 4800)
+
+   setTimeout(() => {
+    restart2();
+   }, 5400)
   //  setTimeout(() => {
   //   fil();
   //  }, 5000)
