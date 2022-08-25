@@ -340,6 +340,8 @@ shell.exec(`HEROKU_API_KEY=${api} sh ${__dirname}/restart.sh`);
     }
     var agencyName = req.body.agency
     var templateVariable = templateNumber[agencyName]
+    console.log(templateVariable);
+    
 
     const response1 = await client.templates.updateTemplate(templateVariable, {
         name: `"Consumer-News-Template-${agencyName}"`,
@@ -355,35 +357,56 @@ shell.exec(`HEROKU_API_KEY=${api} sh ${__dirname}/restart.sh`);
       //   console.log(err)
       // });
   }
-
-  setTimeout(() => {
+  function funcOne(...cb) {
+    console.log("one");
     fun();
-   }, 200)
+    cb.forEach(s => s.apply());
+}
+
+function funcTwo() {
+  cmd();
+    console.log("two");
+}
+
+function funcThree() {
+  run();
+    console.log("three");
+}
+function funcFour() {
+  restart();
+    console.log("four");
+}
+function funcFive() {
+  restart2();
+    console.log("five");
+}
+
+
+funcOne(funcTwo, funcThree, funcFour, funcFive);
+// funcOne(funcTwo, funcThree);
+//   setTimeout(() => {
+//     fun();
+//    }, 100)
 
 // need time in between to execute correctly
 
-  setTimeout(() => {
-   cmd();
-  }, 2500)
+  // setTimeout(() => {
+  //  cmd();
+  // }, 2300)
 
-  setTimeout(() => {
-    run();
-   }, 3500)
+  // setTimeout(() => {
+  //   run();
+  //  }, 3500)
+
 
   //  setTimeout(() => {
-  //   end();
-  //  }, 6000)
+  //   restart();
+  //  }, 4800)
 
-   setTimeout(() => {
-    restart();
-   }, 4800)
-
-   setTimeout(() => {
-    restart2();
-   }, 5400)
   //  setTimeout(() => {
-  //   fil();
-  //  }, 5000)
+  //   restart2();
+  //  }, 5400)
+ 
 
 });
 

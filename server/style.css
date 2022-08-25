@@ -6,6 +6,7 @@
     align-items: center;
     /* background-color: lightblue; */
     font-family: 'Open Sans', sans-serif;
+    margin: 0;
 }
 .pageContainer{
     width: 100%;
