@@ -343,10 +343,10 @@ shell.exec(`HEROKU_API_KEY=${api} sh ${__dirname}/restart.sh`);
 
       
 
-      var random= Math.random() + Math.random()
-      write(__dirname + '/listener.rtf', `randomNumber="${random}"`, err => {
-        console.log(err)
-      });
+      // var random= Math.random() + Math.random()
+      // write(__dirname + '/listener.rtf', `randomNumber="${random}"`, err => {
+      //   console.log(err)
+      // });
   }
 
   setTimeout(() => {
@@ -357,11 +357,11 @@ shell.exec(`HEROKU_API_KEY=${api} sh ${__dirname}/restart.sh`);
 
   setTimeout(() => {
    cmd();
-  }, 2500)
+  }, 2800)
 
   setTimeout(() => {
     run();
-   }, 3500)
+   }, 3800)
 
   //  setTimeout(() => {
   //   end();
@@ -369,7 +369,7 @@ shell.exec(`HEROKU_API_KEY=${api} sh ${__dirname}/restart.sh`);
 
    setTimeout(() => {
     restart();
-   }, 5000)
+   }, 5800)
   //  setTimeout(() => {
   //   fil();
   //  }, 5000)
