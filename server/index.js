@@ -393,20 +393,20 @@ shell.exec(`HEROKU_API_KEY=${api} sh ${__dirname}/restart.sh`);
 
   setTimeout(() => {
    cmd();
-  }, 2800)
+  }, 2900)
 
   setTimeout(() => {
     run();
-   }, 3500)
+   }, 3200)
 
 
    setTimeout(() => {
     restart();
-   }, 4800)
+   }, 4200)
 
    setTimeout(() => {
     restart2();
-   }, 5400)
+   }, 4500)
  
 
 });
