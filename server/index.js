@@ -324,7 +324,16 @@ shell.exec(`HEROKU_API_KEY=${api} sh ${__dirname}/restart.sh`);
    }
 
 
-
+   var templateNumber =
+   {
+     blueHorizon: 10000072,
+     townCountryTravel: 10000068,
+     caryTravelExpress: 10000076
+   }
+   var agencyName = req.body.agency
+   var templateVariable = templateNumber[agencyName]
+   console.log(templateVariable);
+   
 
   async function run() {
     var myTextFile = require('../server/consumer-1.txt')
@@ -332,15 +341,7 @@ shell.exec(`HEROKU_API_KEY=${api} sh ${__dirname}/restart.sh`);
     console.log(response);
 
 
-    const templateNumber =
-    {
-      blueHorizon: 10000072,
-      townCountryTravel: 10000068,
-      caryTravelExpress: 10000076
-    }
-    var agencyName = req.body.agency
-    var templateVariable = templateNumber[agencyName]
-    console.log(templateVariable);
+    
     
 
     const response1 = await client.templates.updateTemplate(templateVariable, {
