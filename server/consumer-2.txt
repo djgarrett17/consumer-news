@@ -428,7 +428,7 @@
                             <td class="mcnImageContent" valign="top" style="padding-right: 0px;padding-left: 0px;padding-top: 0;padding-bottom: 0;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
                                 
                                     
-                                        <img align="center" alt="" src="https://mcusercontent.com/11010af2fb12955cb8611ec8d/images/5038883c-58ed-4a41-911d-cbb684ce6169.png" width="600" style="max-width: 1200px;padding-bottom: 0;display: inline !important;vertical-align: bottom;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" class="mcnImage">
+                                        <img align="center" alt="" src="${imageHeader}" width="600" style="max-width: 1200px;padding-bottom: 0;display: inline !important;vertical-align: bottom;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" class="mcnImage">
                                     
                                 
                             </td>
@@ -446,7 +446,7 @@
                             <td class="mcnImageContent" valign="top" style="padding-right: 9px;padding-left: 9px;padding-top: 0;padding-bottom: 0;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
                                 
                                     
-                                        <img align="center" alt="" src="https://mcusercontent.com/c4fd8980badfdb476a3474815/images/ffa16ad8-9bc0-1e6f-f532-5b33e9b35183.jpg" width="423" style="max-width: 900px;padding-bottom: 0;display: inline !important;vertical-align: bottom;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" class="mcnImage">
+                                        <img align="center" alt="" src="${image}" width="423" style="max-width: 900px;padding-bottom: 0;display: inline !important;vertical-align: bottom;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" class="mcnImage">
                                     
                                 
                             </td>
@@ -472,12 +472,12 @@
                         
                         <td valign="top" class="mcnTextContent" style="padding: 0px 18px 9px;color: #918B8B;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">
                         
-                            <h4 style="text-align: left;display: block;margin: 0;padding: 0;color: #949494;font-family: Georgia;font-size: 20px;font-style: italic;font-weight: normal;line-height: 125%;letter-spacing: normal;">h</h4>
+                            <h4 style="text-align: left;display: block;margin: 0;padding: 0;color: #949494;font-family: Georgia;font-size: 20px;font-style: italic;font-weight: normal;line-height: 125%;letter-spacing: normal;">${contentTitle}</h4>
 
 
 
 
-<p style="color: #918B8B;margin: 10px 0;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">qwerty</p>
+<p style="color: #918B8B;margin: 10px 0;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">${content}</p>
 
 
 
@@ -511,7 +511,7 @@
                     <tbody>
                         <tr>
                             <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Helvetica;font-size: 18px;padding: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                <a class="mcnButton " title="Learn More..." href="https://us5.admin.mailchimp.com/campaigns/#f_list:63105;f_assigned:unassigned;f_search:web%20marketing;t:campaigns-list" target="_blank" style="font-weight: bold;letter-spacing: -0.5px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;display: block;">Learn More...</a>
+                                <a class="mcnButton " title="Learn More..." href="${landingLink}" target="_blank" style="font-weight: bold;letter-spacing: -0.5px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;display: block;">Learn More...</a>
                             </td>
                         </tr>
                     </tbody>
@@ -1007,9 +1007,9 @@ CHECK OUT THESE VIDEOS TO INSPIRE YOUR NEXT ADVENTURE</strong></div>
                         
                         <td valign="top" class="mcnTextContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #757575;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">
                         
-                            <strong>Call us:&nbsp;</strong>mon<br>
-<strong>Email us: </strong><a href="mailto:tue" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #043261;font-weight: normal;text-decoration: underline;">tue</a><br>
-<strong>Visit our website: </strong><a href="wed" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #043261;font-weight: normal;text-decoration: underline;">wed</a>
+                            <strong>Call us:&nbsp;</strong>${phoneNumber}<br>
+<strong>Email us: </strong><a href="mailto:${emailAddress}" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #043261;font-weight: normal;text-decoration: underline;">${emailAddress}</a><br>
+<strong>Visit our website: </strong><a href="${websiteUrl}" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #043261;font-weight: normal;text-decoration: underline;">${websiteUrl}</a>
                         </td>
                     </tr>
                 </tbody></table>

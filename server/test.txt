@@ -1,9 +1,12 @@
 forwardSlash="/" 
  singlestring="\'" 
  semicolon=" <br> " 
- contentTitle='All Day Long Coden${single}s, "YES"' 
- content='iwiwiwi' 
- imageHeader='https:${forwardSlash}${forwardSlash}mcusercontent.com${forwardSlash}0a04777f1cfaf1db009e2e7aa${forwardSlash}images${forwardSlash}d1d0ae1e-bbdf-2f5a-7d93-f8fad0e88464.jpg' 
- image='https:${forwardSlash}${forwardSlash}mcusercontent.com${forwardSlash}c4fd8980badfdb476a3474815${forwardSlash}images${forwardSlash}ab38cc85-c300-bbf1-aa4c-3777324df427.jpg' 
+ contentTitle='h' 
+ content='qwerty' 
+ imageHeader='https:${forwardSlash}${forwardSlash}mcusercontent.com${forwardSlash}11010af2fb12955cb8611ec8d${forwardSlash}images${forwardSlash}5038883c-58ed-4a41-911d-cbb684ce6169.png' 
+ image='https:${forwardSlash}${forwardSlash}mcusercontent.com${forwardSlash}c4fd8980badfdb476a3474815${forwardSlash}images${forwardSlash}ffa16ad8-9bc0-1e6f-f532-5b33e9b35183.jpg' 
+ phone='mon' 
+ email='tue' 
+ website='wed' 
  noContent='' 
- landingLink=''
+ landingLink='https:${forwardSlash}${forwardSlash}us5.admin.mailchimp.com${forwardSlash}campaigns${forwardSlash}#f_list:63105;f_assigned:unassigned;f_search:web%20marketing;t:campaigns-list'
