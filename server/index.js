@@ -329,7 +329,6 @@ app.post('/', upload.single('thefilename'), (req, res) => {
   });
  
 
-
    var imageHeaderUrl= selAgency.replace(/'/g,'${single}').replaceAll('/','${forwardSlash}');
    var phoneNumber= agencyPhone.replace(/'/g,'${single}').replaceAll('/','${forwardSlash}');
    var emailAddress= agencyEmail.replace(/'/g,'${single}').replaceAll('/','${forwardSlash}');
