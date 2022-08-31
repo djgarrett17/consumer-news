@@ -146,6 +146,64 @@ app.post('/', upload.single('thefilename'), (req, res) => {
 
 
 
+  var dropDown =
+    {
+      amandasTravels: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/93915e37-a0a3-56c3-06af-86f50fb026cd.png",'785-766-9827','amanda@amandastravels','www.amandastravels.com', 10000088],
+      aysToursTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/f8b7c96a-d2bd-23d5-71d5-aee0edb144ae.png",'317-322-8687','aystours@aol.com','www.aystours.com', 10000092],
+      blueHorizon: ["https://mcusercontent.com/11010af2fb12955cb8611ec8d/images/5038883c-58ed-4a41-911d-cbb684ce6169.png",'309-526-3499','vacation@bluehorizon.net','www.bluehorizon.net', 10000072],
+      caryTravelExpress: ["https://mcusercontent.com/0a04777f1cfaf1db009e2e7aa/images/d1d0ae1e-bbdf-2f5a-7d93-f8fad0e88464.jpg",'847-639-3300','neelie@carytravelexpress.com','www.carytravelexpress.com', 10000076],
+      chocolateCityTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/acbe4c26-9fcc-eca6-7cc6-6be3ff33eb64.png",'262-492-8747','staff@chocolatecitytravel.com','www.chocolatecitytravel.com', 10000096],
+      compassTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/daf773a0-d6ed-3bbb-280f-dc40597af67a.png",'815-756-1547','info@travelwithcompass.com','www.travelwithcompass.com', 10000100],
+      crystalLakeTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/fdcb5ee7-12a1-0bee-6f16-e9c2943d02b9.png",'815-459-2500','pattyderoocltravel@sbcglobal.net','www.cltravelagency.com', 10000104],
+      davidsHouseOfTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/4823d6ba-93bb-6e74-a1e7-0b4b1a00d709.png",'920-684-6117','davidshouseoftravel@yahoo.com','www.davidshouseoftravel.com', 10000108],
+      destinationsTravelServices: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/588ab7cf-2985-6473-d50e-aa741184157c.png",'815-625-3500','avril@destinationstravelservices.com','www.destinationstravelservices.com', 10000112],
+      dsBelmontTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/c24b70fd-484e-7680-f4bb-0881516d0a4e.png",'847-800-7383','sharon@dsbelmonttravel.com','www.dsbelmonttravel.com', 10000116],
+      expertJourneysTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/b4928016-f598-4e1f-2c8d-bfb67b0b6908.png",'630-803-4311','christie@expertjourneystravel.com','www.expertjourneystravel.com', 10000120],
+      extremeDestinations: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/8df32d21-fb22-2681-62c6-d6fd17ae63a9.png",'651-714-0208','carol@extremedestinationstravel.com','www.extremedestinationstravel.com', 10000124],
+      firstChoiceTravelCruise: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/12de86be-695f-bf7b-cfea-bedb6111d9ff.png",'262-542-5955','info@firstchoicetravelandcruise.com','www.firstchoicetravelandcruise.com', 10000128],
+      freeSpiritTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/1c5eafb6-f9a0-d139-e553-7be48bcee2ca.png",'608-617-5558','info@free-spirit-travel.com','www.free-spirit-travel.com', 10000132],
+      germantownTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/28929a0d-919a-3026-2dce-4a1a51cf2e41.jpg",'262-253-0555','anne@gtowntravel.com','www.gtowntravel.com', 10000136],
+      hinsdaleTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/97a39cd3-4f6e-1925-d39f-1f56986e0318.png",'630-325-1335','thetravelpro@yahoo.com','www.hinsdaletravel.com', 10000140],
+      holidayTravelVacations: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/94aedab6-2914-f897-1dbc-0a45c54042b7.png",'906-228-6355','travel@holiday-mqt.com','www.holidaytravelvacations.com', 10000144],
+      huntleyTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/dbf8c32b-f210-fba0-24a4-0ebf4427be4f.png",'847-669-8900','travel@huntleytravel.com','www.huntleytravel.com', 10000148],
+      insiderTravelPlanners: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/b7fd79cf-b4d3-f51f-d020-712b189d5d38.png",'304-784-5705','info@insidetravelplanners.com','www.insidetravelplanners.com', 10000152],
+      islandBridal: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/b0884563-a02e-f01c-6174-54159473b56a.png",'877-933-2929','travel@islandtravelgroup.com','www.islandtravelgroup.com', 10000156],
+      jjDestinations: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/2e6575dd-f2ed-a19e-12e4-d0243ec3f815.png",'815-524-3424','jkamba@jjdestinations.com','www.jjdestinations.com', 10000160],
+      janusTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/4cb43c77-6632-6397-f881-d2712f074c85.jpg",'773-763-2767','info@janustravel.com','www.janustravel.com', 10000164],
+      jenniferWalkerTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/1100e4b5-a839-f335-1323-24707478413c.png",'309-256-2984','jennifer@jenniferwalkertravel.com','www.jenniferwalkertravel.com', 10000168],
+      jetwayWorldTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/826912c4-8c87-fc42-a2fc-2c6ae883905a.png",'773-779-9813','sales@jetwaytravel.com','www.jetwaytravel.com', 10000172],
+      lighthouseTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/52d24685-6859-8b6f-241c-b2ef2734c077.png",'563-242-2470','noreen@travelwithlighthouse.com','www.travelwithlighthouse.com', 10000176],
+      mooreTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/f7e88803-7821-49b2-3c37-c98231e73e76.png",'847-593-6700','mooretravel@sbcglobal.net','www.mooretravel.com', 10000180],
+      okTravelAgency: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/130c1d6f-44c7-23fb-c349-3f5bcfbb14cf.png",'773-581-0100','karenoktrvl@yahoo.com','www.oktravelagency.com', 10000184],
+      sandcastleWishes: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/ba81947f-ba75-b8b6-7651-5a2835301ca4.png",'205-914-2805','info@sandcastlewishes.com','www.sandcastlewishes.com', 10000188],
+      seeYourWorld: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/b1375bc5-f2d9-61aa-9813-b68eac3c62d7.png",'608-575-3488','info@seeyourworldadventures.com','www.seeyourworldadventures.com', 10000192],
+      shamaTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/02aec321-cf61-c386-50f7-d00dd1b12cef.png",'847-966-7788','raj@shamatravel.com','www.shamatravel.com', 10000196],
+      starshipTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/d74d3f7e-04c7-5b6f-bdeb-3329aca64e4a.png",'847-394-1155','linda@starshiptravel.com','www.starshiptravel.com', 10000200],
+      sunsetFamilyTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/cf90d16b-87db-15fd-4aba-6123a6d049e8.png",'920-268-1234','shelley@sunsetfamilytravel.com','www.sunsetfamilytravel.com', 10000204],
+      townCountryTravel: ["https://mcusercontent.com/663433d5d70d635e4e3bf14a6/images/42040f38-2610-4fed-a5dc-0c294737ef9e.png",'712-792-9742','krista@traveltct.com','www.traveltct.com', 10000068],
+      travelHouseQuincy: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/e7eaf053-cdaa-d6cc-6abd-e517f0880fe7.png",'217-222-0515','book@travelhouseofquincy.com','www.travelhouseofquincy.com', 10000208],
+      travelOnADream: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/3061f719-29e7-4477-135b-5a8ee2f5c442.png",'888-681-1240','info@travelonadream.com','www.travelonadream.com', 10000212],
+      travelPriorities: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/55b4927c-18cd-0812-93d9-79cb950d26cb.png",'847-675-4700','morris@travelpriorities.com','www.travelpriorities.com', 10000216],
+      travelTwoThousand: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/c53a9561-8ce4-f999-1373-9041e11cd767.png",'630-645-9500','agent@askttt.com','www.askttt.com', 10000220],
+      viaTravelService: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/596449de-4df2-6cab-4fbe-41980fc4c79f.png",'414-301-1071','niki@viatravelservice.com','www.viatravelservice.com', 10000224],
+      wilsonTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/a95382cb-3ecc-967d-6f06-ed200fc37083.png",'630-377-3700','agent@wilsontravelandcruise.com','www.wilsontravelandcruise.com', 10000228],
+      wonderlandFamily: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/6147fa81-dda5-ffa7-4e61-5b4b7504c32b.png",'616-481-3463','info@wonderlandfamilyvacations.com','www.wonderlandfamilyvacations.com', 10000232],
+      worldClassTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/de1f245f-c7e1-f75f-8cc7-c7e099a6c10e.png",'630-515-1551','info@worldclasstravel91.com','www.worldclasstravel91.com', 10000236],
+      worldwideTravelerLtd: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/5cab8611-a3bd-3acc-dd2e-5071614f9c1f.png",'815-385-6900','worldwide@worldwidetraveler.net','www.worldwidetraveler.net', 10000240]
+    }
+    const agencyName = req.body.agency
+    var selAgency = dropDown[agencyName][0]
+    var agencyPhone = dropDown[agencyName][1]
+    var agencyEmail = dropDown[agencyName][2]
+    var agencyWebsite = dropDown[agencyName][3]
+    var templateVariable = dropDown[agencyName][4]
+    
+    console.log(selAgency)
+    console.log(dropDown)
+    console.log(agencyName)
+
+
+
 
   const fun = async () => {
 
@@ -236,60 +294,56 @@ app.post('/', upload.single('thefilename'), (req, res) => {
    }
 
 
-  var dropDown =
-    {
-      amandasTravels: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/93915e37-a0a3-56c3-06af-86f50fb026cd.png",'785-766-9827','amanda@amandastravels','www.amandastravels.com'],
-      aysToursTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/f8b7c96a-d2bd-23d5-71d5-aee0edb144ae.png",'317-322-8687','aystours@aol.com','www.aystours.com'],
-      blueHorizon: ["https://mcusercontent.com/11010af2fb12955cb8611ec8d/images/5038883c-58ed-4a41-911d-cbb684ce6169.png",'309-526-3499','vacation@bluehorizon.net','www.bluehorizon.net'],
-      caryTravelExpress: ["https://mcusercontent.com/0a04777f1cfaf1db009e2e7aa/images/d1d0ae1e-bbdf-2f5a-7d93-f8fad0e88464.jpg",'847-639-3300','neelie@carytravelexpress.com','www.carytravelexpress.com'],
-      chocolateCityTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/acbe4c26-9fcc-eca6-7cc6-6be3ff33eb64.png",'262-492-8747','staff@chocolatecitytravel.com','www.chocolatecitytravel.com'],
-      compassTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/daf773a0-d6ed-3bbb-280f-dc40597af67a.png",'815-756-1547','info@travelwithcompass.com','www.travelwithcompass.com'],
-      crystalLakeTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/fdcb5ee7-12a1-0bee-6f16-e9c2943d02b9.png",'815-459-2500','pattyderoocltravel@sbcglobal.net','www.cltravelagency.com'],
-      davidsHouseOfTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/4823d6ba-93bb-6e74-a1e7-0b4b1a00d709.png",'920-684-6117','davidshouseoftravel@yahoo.com','www.davidshouseoftravel.com'],
-      destinationsTravelServices: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/588ab7cf-2985-6473-d50e-aa741184157c.png",'815-625-3500','avril@destinationstravelservices.com','www.destinationstravelservices.com'],
-      dsBelmontTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/c24b70fd-484e-7680-f4bb-0881516d0a4e.png",'847-800-7383','sharon@dsbelmonttravel.com','www.dsbelmonttravel.com'],
-      expertJourneysTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/b4928016-f598-4e1f-2c8d-bfb67b0b6908.png",'630-803-4311','christie@expertjourneystravel.com','www.expertjourneystravel.com'],
-      extremeDestinations: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/8df32d21-fb22-2681-62c6-d6fd17ae63a9.png",'651-714-0208','carol@extremedestinationstravel.com','www.extremedestinationstravel.com'],
-      firstChoiceTravelCruise: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/12de86be-695f-bf7b-cfea-bedb6111d9ff.png",'262-542-5955','info@firstchoicetravelandcruise.com','www.firstchoicetravelandcruise.com'],
-      freeSpiritTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/1c5eafb6-f9a0-d139-e553-7be48bcee2ca.png",'608-617-5558','info@free-spirit-travel.com','www.free-spirit-travel.com'],
-      germantownTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/28929a0d-919a-3026-2dce-4a1a51cf2e41.jpg",'262-253-0555','anne@gtowntravel.com','www.gtowntravel.com'],
-      hinsdaleTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/97a39cd3-4f6e-1925-d39f-1f56986e0318.png",'630-325-1335','thetravelpro@yahoo.com','www.hinsdaletravel.com'],
-      holidayTravelVacations: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/94aedab6-2914-f897-1dbc-0a45c54042b7.png",'906-228-6355','travel@holiday-mqt.com','www.holidaytravelvacations.com'],
-      huntleyTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/dbf8c32b-f210-fba0-24a4-0ebf4427be4f.png",'847-669-8900','travel@huntleytravel.com','www.huntleytravel.com'],
-      insiderTravelPlanners: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/b7fd79cf-b4d3-f51f-d020-712b189d5d38.png",'304-784-5705','info@insidetravelplanners.com','www.insidetravelplanners.com'],
-      islandBridal: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/b0884563-a02e-f01c-6174-54159473b56a.png",'877-933-2929','travel@islandtravelgroup.com','www.islandtravelgroup.com'],
-      jjDestinations: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/2e6575dd-f2ed-a19e-12e4-d0243ec3f815.png",'815-524-3424','jkamba@jjdestinations.com','www.jjdestinations.com'],
-      janusTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/4cb43c77-6632-6397-f881-d2712f074c85.jpg",'773-763-2767','info@janustravel.com','www.janustravel.com'],
-      jenniferWalkerTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/1100e4b5-a839-f335-1323-24707478413c.png",'309-256-2984','jennifer@jenniferwalkertravel.com','www.jenniferwalkertravel.com'],
-      jetwayWorldTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/826912c4-8c87-fc42-a2fc-2c6ae883905a.png",'773-779-9813','sales@jetwaytravel.com','www.jetwaytravel.com'],
-      lighthouseTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/52d24685-6859-8b6f-241c-b2ef2734c077.png",'563-242-2470','noreen@travelwithlighthouse.com','www.travelwithlighthouse.com'],
-      mooreTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/f7e88803-7821-49b2-3c37-c98231e73e76.png",'847-593-6700','mooretravel@sbcglobal.net','www.mooretravel.com'],
-      okTravelAgency: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/130c1d6f-44c7-23fb-c349-3f5bcfbb14cf.png",'773-581-0100','karenoktrvl@yahoo.com','www.oktravelagency.com'],
-      sandcastleWishes: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/ba81947f-ba75-b8b6-7651-5a2835301ca4.png",'205-914-2805','info@sandcastlewishes.com','www.sandcastlewishes.com'],
-      seeYourWorld: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/b1375bc5-f2d9-61aa-9813-b68eac3c62d7.png",'608-575-3488','info@seeyourworldadventures.com','www.seeyourworldadventures.com'],
-      shamaTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/02aec321-cf61-c386-50f7-d00dd1b12cef.png",'847-966-7788','raj@shamatravel.com','www.shamatravel.com'],
-      starshipTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/d74d3f7e-04c7-5b6f-bdeb-3329aca64e4a.png",'847-394-1155','linda@starshiptravel.com','www.starshiptravel.com'],
-      sunsetFamilyTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/cf90d16b-87db-15fd-4aba-6123a6d049e8.png",'920-268-1234','shelley@sunsetfamilytravel.com','www.sunsetfamilytravel.com'],
-      townCountryTravel: ["https://mcusercontent.com/663433d5d70d635e4e3bf14a6/images/42040f38-2610-4fed-a5dc-0c294737ef9e.png",'712-792-9742','krista@traveltct.com','www.traveltct.com'],
-      travelHouseQuincy: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/e7eaf053-cdaa-d6cc-6abd-e517f0880fe7.png",'217-222-0515','book@travelhouseofquincy.com','www.travelhouseofquincy.com'],
-      travelOnADream: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/3061f719-29e7-4477-135b-5a8ee2f5c442.png",'888-681-1240','info@travelonadream.com','www.travelonadream.com'],
-      travelPriorities: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/55b4927c-18cd-0812-93d9-79cb950d26cb.png",'847-675-4700','morris@travelpriorities.com','www.travelpriorities.com'],
-      travelTwoThousand: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/c53a9561-8ce4-f999-1373-9041e11cd767.png",'630-645-9500','agent@askttt.com','www.askttt.com'],
-      viaTravelService: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/596449de-4df2-6cab-4fbe-41980fc4c79f.png",'414-301-1071','niki@viatravelservice.com','www.viatravelservice.com'],
-      wilsonTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/a95382cb-3ecc-967d-6f06-ed200fc37083.png",'630-377-3700','agent@wilsontravelandcruise.com','www.wilsontravelandcruise.com'],
-      wonderlandFamily: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/6147fa81-dda5-ffa7-4e61-5b4b7504c32b.png",'616-481-3463','info@wonderlandfamilyvacations.com','www.wonderlandfamilyvacations.com'],
-      worldClassTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/de1f245f-c7e1-f75f-8cc7-c7e099a6c10e.png",'630-515-1551','info@worldclasstravel91.com','www.worldclasstravel91.com'],
-      worldwideTravelerLtd: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/5cab8611-a3bd-3acc-dd2e-5071614f9c1f.png",'815-385-6900','worldwide@worldwidetraveler.net','www.worldwidetraveler.net']
-    }
-    const agencyName = req.body.agency
-    var selAgency = dropDown[agencyName][0]
-    var agencyPhone = dropDown[agencyName][1]
-    var agencyEmail = dropDown[agencyName][2]
-    var agencyWebsite = dropDown[agencyName][3]
+  
+
+  //   var templateNumber =
+  //  {
+  //   amandasTravels: 10000088,
+  //   aysToursTravel: 10000092,
+  //   blueHorizon: 10000072,
+  //   caryTravelExpress: 10000076,
+  //   chocolateCityTravel: 10000096,
+  //   compassTravel: 10000100,
+  //   crystalLakeTravel: 10000104,
+  //   davidsHouseOfTravel: 10000108,
+  //   destinationsTravelServices: 10000112,
+  //   dsBelmontTravel: 10000116,
+  //   expertJourneysTravel: 10000120,
+  //   extremeDestinations: 10000124,
+  //   firstChoiceTravelCruise: 10000128,
+  //   freeSpiritTravel: 10000132,
+  //   germantownTravel: 10000136,
+  //   hinsdaleTravel: 10000140,
+  //   holidayTravelVacations: 10000144,
+  //   huntleyTravel: 10000148,
+  //   insiderTravelPlanners: 10000152,
+  //   islandBridal: 10000156,
+  //   jjDestinations: 10000160,
+  //   janusTravel: 10000164,
+  //   jenniferWalkerTravel: 10000168,
+  //   jetwayWorldTravel: 10000172,
+  //   lighthouseTravel: 10000176,
+  //   mooreTravel: 10000180,
+  //   okTravelAgency: 10000184,
+  //   sandcastleWishes: 10000188,
+  //   seeYourWorld: 10000192,
+  //   shamaTravel: 10000196,
+  //   starshipTravel: 10000200,
+  //   sunsetFamilyTravel: 10000204,
+  //   townCountryTravel: 10000068,
+  //   travelHouseQuincy: 10000208,
+  //   travelOnADream: 10000212,
+  //   travelPriorities: 10000216,
+  //   travelTwoThousand: 10000220,
+  //   viaTravelService: 10000224,
+  //   wilsonTravel: 10000228,
+  //   wonderlandFamily: 10000232,
+  //   worldClassTravel: 10000236,
+  //   worldwideTravelerLtd: 10000240
+  //  }
+
+
     
-    console.log(selAgency)
-    console.log(dropDown)
-    console.log(agencyName)
 
 
 
@@ -369,56 +423,10 @@ shell.exec(`HEROKU_API_KEY=${api} sh ${__dirname}/restart.sh`);
    }
 
 
-   var templateNumber =
-   {
-    amandasTravels: 100000911,
-    aysToursTravel: 100000911,
-    blueHorizon: 10000072,
-    caryTravelExpress: 10000076,
-    chocolateCityTravel: 100000911,
-    compassTravel: 100000911,
-    crystalLakeTravel: 100000911,
-    davidsHouseOfTravel: 100000911,
-    destinationsTravelServices: 100000911,
-    dsBelmontTravel: 100000911,
-    expertJourneysTravel: 100000911,
-    extremeDestinations: 100000911,
-    firstChoiceTravelCruise: 100000911,
-    freeSpiritTravel: 100000911,
-    germantownTravel: 100000911,
-    hinsdaleTravel: 100000911,
-    holidayTravelVacations: 100000911,
-    huntleyTravel: 100000911,
-    insiderTravelPlanners: 100000911,
-    islandBridal: 100000911,
-    jjDestinations: 100000911,
-    janusTravel: 100000911,
-    jenniferWalkerTravel: 100000911,
-    jetwayWorldTravel: 100000911,
-    lighthouseTravel: 100000911,
-    mooreTravel: 100000911,
-    okTravelAgency: 100000911,
-    sandcastleWishes: 100000911,
-    seeYourWorld: 100000911,
-    shamaTravel: 100000911,
-    starshipTravel: 100000911,
-    sunsetFamilyTravel: 100000911,
-    townCountryTravel: 10000068,
-    travelHouseQuincy: 100000911,
-    travelOnADream: 100000911,
-    travelPriorities: 100000911,
-    travelTwoThousand: 100000911,
-    viaTravelService: 100000911,
-    wilsonTravel: 100000911,
-    wonderlandFamily: 100000911,
-    worldClassTravel: 100000911,
-    worldwideTravelerLtd: 100000911
-    
-     
-   }
-   var agencyName = req.body.agency
-   var templateVariable = templateNumber[agencyName]
-   console.log(templateVariable);
+   
+  //  var agencyName = req.body.agency
+  //  var templateVariable = templateNumber[agencyName]
+  //  console.log(templateVariable);
    
 
 
@@ -429,7 +437,7 @@ shell.exec(`HEROKU_API_KEY=${api} sh ${__dirname}/restart.sh`);
 
 
     
-    
+    console.log(templateVariable)
 
     const response1 = await client.templates.updateTemplate(templateVariable, {
         name: `"Consumer-News-Template-${agencyName}"`,
