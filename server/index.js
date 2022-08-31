@@ -157,7 +157,7 @@ app.post('/', upload.single('thefilename'), (req, res) => {
       caryTravelExpress: ["https://mcusercontent.com/0a04777f1cfaf1db009e2e7aa/images/d1d0ae1e-bbdf-2f5a-7d93-f8fad0e88464.jpg",'847-639-3300','neelie@carytravelexpress.com','www.carytravelexpress.com', 10000076],
       chocolateCityTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/acbe4c26-9fcc-eca6-7cc6-6be3ff33eb64.png",'262-492-8747','staff@chocolatecitytravel.com','www.chocolatecitytravel.com', 10000096],
       compassTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/daf773a0-d6ed-3bbb-280f-dc40597af67a.png",'815-756-1547','info@travelwithcompass.com','www.travelwithcompass.com', 10000100],
-      crystalLakeTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/fdcb5ee7-12a1-0bee-6f16-e9c2943d02b9.png",'815-459-2500','pattyderoocltravel@sbcglobal.net','www.cltravelagency.com', 10000104],
+      crystalLakeTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/ef236e43-7c3e-534d-f40d-3f551a8572dd.png",'815-459-2500','pattyderoocltravel@sbcglobal.net','www.crystallaketravel.com', 10000104],
       davidsHouseOfTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/4823d6ba-93bb-6e74-a1e7-0b4b1a00d709.png",'920-684-6117','davidshouseoftravel@yahoo.com','www.davidshouseoftravel.com', 10000108],
       destinationsTravelServices: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/588ab7cf-2985-6473-d50e-aa741184157c.png",'815-625-3500','avril@destinationstravelservices.com','www.destinationstravelservices.com', 10000112],
       dsBelmontTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/c24b70fd-484e-7680-f4bb-0881516d0a4e.png",'847-800-7383','sharon@dsbelmonttravel.com','www.dsbelmonttravel.com', 10000116],
@@ -308,7 +308,7 @@ app.post('/', upload.single('thefilename'), (req, res) => {
     service: 'Gmail',
     auth: {
       user: 'djgarrett17@gmail.com',
-      pass: 'eaebknzszxkgtdfr'
+      pass: process.env.EMAIL_APP_PASS
     }
   });
 
@@ -327,57 +327,7 @@ app.post('/', upload.single('thefilename'), (req, res) => {
       console.log('Email Message: ' + emailMessage);
     }
   });
-  
-
-  //   var templateNumber =
-  //  {
-  //   amandasTravels: 10000088,
-  //   aysToursTravel: 10000092,
-  //   blueHorizon: 10000072,
-  //   caryTravelExpress: 10000076,
-  //   chocolateCityTravel: 10000096,
-  //   compassTravel: 10000100,
-  //   crystalLakeTravel: 10000104,
-  //   davidsHouseOfTravel: 10000108,
-  //   destinationsTravelServices: 10000112,
-  //   dsBelmontTravel: 10000116,
-  //   expertJourneysTravel: 10000120,
-  //   extremeDestinations: 10000124,
-  //   firstChoiceTravelCruise: 10000128,
-  //   freeSpiritTravel: 10000132,
-  //   germantownTravel: 10000136,
-  //   hinsdaleTravel: 10000140,
-  //   holidayTravelVacations: 10000144,
-  //   huntleyTravel: 10000148,
-  //   insiderTravelPlanners: 10000152,
-  //   islandBridal: 10000156,
-  //   jjDestinations: 10000160,
-  //   janusTravel: 10000164,
-  //   jenniferWalkerTravel: 10000168,
-  //   jetwayWorldTravel: 10000172,
-  //   lighthouseTravel: 10000176,
-  //   mooreTravel: 10000180,
-  //   okTravelAgency: 10000184,
-  //   sandcastleWishes: 10000188,
-  //   seeYourWorld: 10000192,
-  //   shamaTravel: 10000196,
-  //   starshipTravel: 10000200,
-  //   sunsetFamilyTravel: 10000204,
-  //   townCountryTravel: 10000068,
-  //   travelHouseQuincy: 10000208,
-  //   travelOnADream: 10000212,
-  //   travelPriorities: 10000216,
-  //   travelTwoThousand: 10000220,
-  //   viaTravelService: 10000224,
-  //   wilsonTravel: 10000228,
-  //   wonderlandFamily: 10000232,
-  //   worldClassTravel: 10000236,
-  //   worldwideTravelerLtd: 10000240
-  //  }
-
-
-    
-
+ 
 
 
    var imageHeaderUrl= selAgency.replace(/'/g,'${single}').replaceAll('/','${forwardSlash}');

@@ -1,12 +1,12 @@
 forwardSlash="/" 
  singlestring="\'" 
  semicolon=" <br> " 
- contentTitle='All Day Long Code' 
- content='333333333' 
+ contentTitle='All Day Long Coden${single}s09' 
+ content='087huuhb51!@$#5' 
  imageHeader='https:${forwardSlash}${forwardSlash}mcusercontent.com${forwardSlash}c4fd8980badfdb476a3474815${forwardSlash}images${forwardSlash}a95382cb-3ecc-967d-6f06-ed200fc37083.png' 
- image='https:${forwardSlash}${forwardSlash}mcusercontent.com${forwardSlash}c4fd8980badfdb476a3474815${forwardSlash}images${forwardSlash}42ee49b8-305a-3834-5e44-4daeb30ebdb5.jpg' 
+ image='https:${forwardSlash}${forwardSlash}mcusercontent.com${forwardSlash}c4fd8980badfdb476a3474815${forwardSlash}images${forwardSlash}f8620895-56a7-cf6f-9a52-6f3cc98e5482.jpg' 
  phone='630-377-3700' 
  email='agent@wilsontravelandcruise.com' 
  website='www.wilsontravelandcruise.com' 
  noContent='' 
- landingLink='t4frfc'
+ landingLink='https:${forwardSlash}${forwardSlash}consumer-e-newsletter.herokuapp.com${forwardSlash}'
