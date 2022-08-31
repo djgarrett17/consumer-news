@@ -13,6 +13,8 @@ const multer = require('multer');
 const morgan = require("morgan");
 const path = require('path');
 const fs = require('fs');
+const nodemailer = require('nodemailer');
+
 // const upload = multer({dest: 'uploads/'});
 
 // app.use(express.static(__dirname, 'server'));
@@ -114,6 +116,7 @@ app.post('/', upload.single('thefilename'), (req, res) => {
   // console.log(req.body.fname);
   // const x = "&ldquo;"
   // const z = "&lsquo;"
+  
 
   // console.log(req.body.msg);
   // console.log(req.body.contentTitle);
@@ -191,7 +194,7 @@ app.post('/', upload.single('thefilename'), (req, res) => {
       worldClassTravel: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/de1f245f-c7e1-f75f-8cc7-c7e099a6c10e.png",'630-515-1551','info@worldclasstravel91.com','www.worldclasstravel91.com', 10000236],
       worldwideTravelerLtd: ["https://mcusercontent.com/c4fd8980badfdb476a3474815/images/5cab8611-a3bd-3acc-dd2e-5071614f9c1f.png",'815-385-6900','worldwide@worldwidetraveler.net','www.worldwidetraveler.net', 10000240]
     }
-    const agencyName = req.body.agency
+    var agencyName = req.body.agency
     var selAgency = dropDown[agencyName][0]
     var agencyPhone = dropDown[agencyName][1]
     var agencyEmail = dropDown[agencyName][2]
@@ -204,6 +207,12 @@ app.post('/', upload.single('thefilename'), (req, res) => {
 
 
 
+
+
+
+
+
+    
 
   const fun = async () => {
 
@@ -294,6 +303,30 @@ app.post('/', upload.single('thefilename'), (req, res) => {
    }
 
 
+
+   var transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+      user: 'djgarrett17@gmail.com',
+      pass: 'eaebknzszxkgtdfr'
+    }
+  });
+
+  var emailOptions = {
+    from: 'Devin Garrett <djgarrett17@gmail.com>',
+    to: "devin.garrett@mvptravel.com",
+    subject: 'Node Mailer Test',
+    text: `Agency: ${agencyName} \n Image URL: ${fileUrl} \n Content Title: ${req.body.contentTitle} \n Content: ${req.body.msg} \n Landing Link: ${req.body.landinglink}`
+  };
+
+  transporter.sendMail(emailOptions, (err, info) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log('Message Sent: ' + info.response);
+      console.log('Email Message: ' + emailMessage);
+    }
+  });
   
 
   //   var templateNumber =
