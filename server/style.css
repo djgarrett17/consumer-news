@@ -2,67 +2,120 @@
     width: 100%;
     height: 100%;
     display:flex;
-    flex-direction:column;
     align-items: center;
+    justify-content: center;
     /* background-color: lightblue; */
     font-family: 'Open Sans', sans-serif;
-    margin: 0;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 .pageContainer{
-    width: 100%;
+    width: 58%;
     height: 100%;
     display:flex;
     flex-direction:column;
     align-items: center;
-    background-color: lightblue;
-    padding-top: 20px;
+    justify-content: center;
+    background-color: white;
+    /* padding: 0px 40px; */
+    margin: 0 !important;
+    
 }
+.imageContainer{
+    width: 42%;
+    height: 100%;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    background-color: white;
+    padding: 0 !important;
+    margin: 0 !important;
+   
+
+}
+.sideImage{
+    max-width: 100%;
+    max-height: 110%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* .titleContainer{
+    width: 100%;
+} */
 .consumerTitle{
-    text-align: center;
     font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: xx-large;
 }
 .formContainer{
     width: 100%;
     display:flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 0px;
+    padding: 0px 0px;
+    overflow-y: scroll;
 }
 .fullForm{
-    width: 700px;
-    background-color: white;
-    border: 1px solid lightgray;
-    border-radius: 5px;
+    width: 70%;
     display:flex;
     flex-direction: column;
-    padding: 20px 20px 20px 20px;
+    padding: 0px;
     /* align-items: center; */
 }
 .instructionsTitle{
-    font-weight: bold;
-    font-size: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+}
+.instructions{
+    width: 100%;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 20px;
+    font-size: 13px;
 }
 .fullWidth{
     width: 100%;
-    padding: 12px 10px 12px 10px;
+    padding: 16px 12px 16px 14px;
     font-family: 'Open Sans', sans-serif;
+    border: none;
 }
 .agencySelect{
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    border: 1px solid lightgray !important;
+    background-color: #fff !important;
 }
 .titleCopy{
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    background-color: #ededed;
 }
 .bodyCopy{
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     height: 140px;
-    max-width: 700px;
+    max-width: 100%;
+    background-color: #ededed;
 }
 .linkLanding{
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    background-color: #ededed;
+}
+.fileUploadContainer{
+    width: 100%;
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    margin: 0px;
+    padding: 10px 0px;
 }
 .fileUpload{
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    width: 100%;
 }
 .submitButton{
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    background-color: rgb(47, 66, 99) !important;
+    color: white;
+
 }
